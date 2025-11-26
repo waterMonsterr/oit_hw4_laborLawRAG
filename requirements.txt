@@ -1,8 +1,10 @@
 streamlit
 langchain
 langchain-community
+langchain-core
 langchain-huggingface
 langchain-groq
 faiss-cpu
 python-dotenv
+huggingface-hub
 sentence-transformers
