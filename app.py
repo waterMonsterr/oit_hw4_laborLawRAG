@@ -1,13 +1,28 @@
 import streamlit as st
 import os
 import random
+from dotenv import load_dotenv
+
+# 載入 LangChain 相關
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
+
+# ★★★ 修改這裡：將 Chain 相關的引用寫在一起 ★★★
+from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
-from dotenv import load_dotenv
-from langchain.chains import create_retrieval_chain
+
+#import streamlit as st
+#import os
+#import random
+#from langchain_groq import ChatGroq
+#from langchain_huggingface import HuggingFaceEmbeddings
+#from langchain_community.vectorstores import FAISS
+#from langchain.chains.combine_documents import create_stuff_documents_chain
+#from langchain_core.prompts import ChatPromptTemplate
+#from dotenv import load_dotenv
+#from langchain.chains import create_retrieval_chain
 
 # --- 1. 基礎設定 ---
 load_dotenv()
